@@ -7,13 +7,8 @@
 Official implementation of **"Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning"**, accepted to **ECCV 2026**.
 
 <p align="center">
-  <img src="assets/teaser.pdf" width="90%" alt="Method overview">
+  <img src="assets/teaser.png" width="90%" alt="Method overview">
 </p>
-
-> **Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning**
-> Kazi Sajeed Mehrab, Hani Alomari, Najibul Haque Sarker, Chia-Wei Tang, Zaber Ibn Abdul Hakim, Anuj Karpatne, Chris Thomas
-> *[Your Affiliation]*
-> European Conference on Computer Vision (ECCV), 2026
 
 > ⏳ **We are currently cleaning up our code and preparing the checkpoints for release.** Stay tuned!
 
