@@ -1,0 +1,99 @@
+data:
+  prompt_key: problem
+  answer_key: solution
+  image_key: image
+  video_fps: 2.0
+  max_prompt_length: 3100
+  max_response_length: 2048
+  rollout_batch_size: 16
+  mini_rollout_batch_size: null
+  format_prompt: ./prompts/ophrg_prompt.txt
+  override_chat_template: null
+  shuffle: true
+  seed: 1
+  min_pixels: 262144
+  max_pixels: 4194304
+  filter_overlong_prompts: true
+
+algorithm:
+  adv_estimator: grpo
+  disable_kl: false
+  use_kl_loss: true
+  kl_penalty: low_var_kl
+  kl_coef: 1.0e-2
+  online_filtering: false
+
+worker:
+  actor:
+    global_batch_size: 16
+    micro_batch_size_per_device_for_update: 2
+    micro_batch_size_per_device_for_experience: 2
+    max_grad_norm: 1.0
+    padding_free: true
+    dynamic_batching: true
+    ulysses_size: 1
+    model:
+      enable_gradient_checkpointing: true
+      trust_remote_code: false
+      freeze_vision_tower: false
+    optim:
+      lr: 1.0e-6
+      weight_decay: 1.0e-2
+      strategy: adamw
+      lr_warmup_ratio: 0.0
+    fsdp:
+      enable_full_shard: true
+      enable_cpu_offload: false
+      enable_rank0_init: true
+    offload:
+      offload_params: true
+      offload_optimizer: true
+
+  rollout:
+    n: 4
+    temperature: 1.2
+    top_p: 1.0
+    limit_images: 0
+    gpu_memory_utilization: 0.6
+    enforce_eager: false
+    enable_chunked_prefill: false
+    tensor_parallel_size: 2
+    disable_tqdm: false
+    val_override_config:
+      temperature: 0.6
+      top_p: 0.95
+      n: 1
+
+  ref:
+    fsdp:
+      enable_full_shard: true
+      enable_cpu_offload: true
+      enable_rank0_init: true
+    offload:
+      offload_params: false
+
+  reward:
+    reward_type: batch
+    reward_function: ./reward_function/ophrg_reward.py:compute_score
+
+trainer:
+  total_epochs: 3
+  max_steps: 1300
+  project_name: easy_r1
+  experiment_name: ophrg_qwen3vl4b_instruct
+  logger: ["file", "wandb"]
+  nnodes: 1
+  n_gpus_per_node: 4
+  max_try_make_batch: 20
+  val_freq: -1
+  val_before_train: false
+  val_only: false
+  save_freq: 50
+  save_limit: 30
+  save_model_only: false
+  load_checkpoint_path: null
+  find_last_checkpoint: true
+
+active_vision:
+  enabled: false
+  crop_padding_ratio: 0.10

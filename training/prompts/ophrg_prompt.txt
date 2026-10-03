@@ -1,0 +1,58 @@
+Please find "{Question}" with bounding boxes and points from the given image.
+Your goal is to output tight bounding boxes and a representative point.
+
+GENERAL RULES:
+- Output tight, compact boxes with minimal extra background.
+- The representative point must lie inside "{Question}".
+- If nothing matches the query, output [] for the relevant JSON lists.
+- The query may refer to a whole object or a part of an object. If the query is about a part, first find the whole object that contains the part, then find the part within that object.
+
+You MUST follow these steps and output structure.
+
+STEP 1 — Locate
+In <locate> </locate> tags, think about:
+- What the query is asking for.
+- Whether it is a whole object or a part.
+- Where it is in the image.
+
+STEP 2 — Decide if you are finding an object or a part
+In <target> </target> tags, output either "object" or "part":
+- "object": the query is about a whole object.
+- "part": the query is about a part of an object.
+
+STEP 3 — If <target> is a "part", locate the object to which the part belongs
+- If <target> is "part", first find the whole object(s) that contain the part. In <object_hint> </object_hint> tags, output a JSON list of these object boxes:
+[{{"bbox_2d": [x1, y1, x2, y2], "point_2d": [cx, cy]}}, ...]
+- If <target> is "object", inside <object_hint> tags output a single empty list: [].
+
+STEP 4 — First Answer
+In <first_answer> </first_answer> tags, output a JSON list of the boxes for what the query directly refers to, that is "{Question}":
+[{{"bbox_2d": [px1, py1, px2, py2], "point_2d": [pcx, pcy]}}, ...]
+- If <target> is "object", these boxes should cover the whole object.
+- If <target> is "part", these boxes should cover only the part (not the entire object). The part should be within the object boxes in <object_hint>.
+
+STEP 5 — Criticism (Self-Check)
+In <criticism> </criticism> tags, re-examine your <first_answer>. Do the boxes tightly enclose "{Question}"? If adjustments are needed, describe the issue and suggested adjustments. Examples of necessary adjustments could be to make the bboxes smaller or bigger, or move the bboxes in any direction.
+The last part inside <criticism> MUST be exactly one of:
+- "ADJUSTMENT: YES"
+- or "ADJUSTMENT: NO"
+Output "ADJUSTMENT: NO" if the boxes and points in <first_answer> are correct and no adjustments are necessary. Output "ADJUSTMENT: YES" if the <first_answer> needs adjustments to enclose "{Question}".
+Format (describe what YOU actually observe; do not copy this wording):
+- "<criticism>[your assessment of whether the boxes tightly enclose the target, and the specific adjustment you will make, if any]. ADJUSTMENT: YES|NO</criticism>"
+
+STEP 6 — FINAL ANSWER
+In <answer> </answer> tags, output the final answer.
+- If <criticism> ends with "ADJUSTMENT: NO":
+  - The JSON list in <answer> MUST be IDENTICAL to the JSON list in <first_answer>.
+- If <criticism> ends with "ADJUSTMENT: YES":
+  - At least one bbox_2d or point_2d in <answer> MUST be different from those in <first_answer>, and the changes should address the issues described in <criticism>.
+The <answer> should contain a JSON list of entries with bbox_2d and point_2d:
+[{{"bbox_2d": [qx1, qy1, qx2, qy2], "point_2d": [qcx, qcy]}}, ...]
+
+OUTPUT FORMAT EXAMPLE (STRUCTURE ONLY):
+<locate>thinking here</locate>
+<target>object|part</target>
+<object_hint>[{{"bbox_2d": [x1,y1,x2,y2], "point_2d": [cx,cy]}}, ...] | []</object_hint>
+<first_answer>[{{"bbox_2d": [px1,py1,px2,py2], "point_2d": [pcx,pcy]}}, ...]</first_answer>
+<criticism>criticism here. ADJUSTMENT: YES|NO</criticism>
+<answer>[{{"bbox_2d": [qx1,qy1,qx2,qy2], "point_2d": [qcx,qcy]}}, ...]</answer>
