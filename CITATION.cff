@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite our paper."
+title: "Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning"
+authors:
+- family-names: "Mehrab"
+  given-names: "Kazi Sajeed"
+- family-names: "Alomari"
+  given-names: "Hani"
+- family-names: "Sarker"
+  given-names: "Najibul Haque"
+- family-names: "Tang"
+  given-names: "Chia-Wei"
+- family-names: "Hakim"
+  given-names: "Zaber Ibn Abdul"
+- family-names: "Karpatne"
+  given-names: "Anuj"
+- family-names: "Thomas"
+  given-names: "Chris"
+date-released: "2026-09-15"
+repository-code: "https://github.com/sajeedmehrab/op-hrg"
+license: MIT
+keywords:
+  - visual grounding
+  - part grounding
+  - reinforcement learning
+  - multimodal large language models
+preferred-citation:
+  type: conference-paper
+  title: "Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning"
+  authors:
+  - family-names: "Mehrab"
+    given-names: "Kazi Sajeed"
+  - family-names: "Alomari"
+    given-names: "Hani"
+  - family-names: "Sarker"
+    given-names: "Najibul Haque"
+  - family-names: "Tang"
+    given-names: "Chia-Wei"
+  - family-names: "Hakim"
+    given-names: "Zaber Ibn Abdul"
+  - family-names: "Karpatne"
+    given-names: "Anuj"
+  - family-names: "Thomas"
+    given-names: "Chris"
+  collection-title: "Computer Vision – ECCV 2026"
+  publisher:
+    name: "Springer Nature Switzerland"
+  doi: "10.1007/978-3-032-37383-0_34"
+  start: 590
+  end: 608
+  year: 2026
