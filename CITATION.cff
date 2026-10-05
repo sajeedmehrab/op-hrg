@@ -22,8 +22,21 @@ license: MIT
 keywords:
   - visual grounding
   - part grounding
+  - part-level visual grounding
+  - fine-grained visual grounding
+  - referring expression comprehension
+  - reasoning segmentation
+  - part segmentation
   - reinforcement learning
+  - GRPO
   - multimodal large language models
+  - vision-language models
+  - Qwen3-VL
+  - visual reasoning
+  - self-reflection
+  - InstructPart
+  - PartImageNet
+  - PascalPart
 preferred-citation:
   type: conference-paper
   title: "Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning"
