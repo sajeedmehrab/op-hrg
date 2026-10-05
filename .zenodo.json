@@ -1,0 +1,49 @@
+{
+    "creators": [
+      {"name": "Mehrab, Kazi Sajeed", "affiliation": "Virginia Tech"},
+      {"name": "Alomari, Hani", "affiliation": "Virginia Tech"},
+      {"name": "Sarker, Najibul Haque", "affiliation": "Virginia Tech"},
+      {"name": "Tang, Chia-Wei", "affiliation": "Virginia Tech"},
+      {"name": "Hakim, Zaber Ibn Abdul", "affiliation": "Virginia Tech"},
+      {"name": "Karpatne, Anuj", "affiliation": "Virginia Tech"},
+      {"name": "Thomas, Chris", "affiliation": "Virginia Tech"}
+    ],
+    "description": "<p><b>Please cite our paper:</b> Mehrab et al., \"Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning\", ECCV 2026. DOI: <a href=\"https://doi.org/10.1007/978-3-032-37383-0_34\">10.1007/978-3-032-37383-0_34</a>.</p><p>Code for the ECCV 2026 paper <i>Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning</i> (OP-HRG): training, training-data construction, evaluation, and baselines.</p>",
+    "keywords": [
+      "visual grounding",
+      "part grounding",
+      "part-level visual grounding",
+      "fine-grained visual grounding",
+      "referring expression comprehension",
+      "reasoning segmentation",
+      "part segmentation",
+      "reinforcement learning",
+      "GRPO",
+      "multimodal large language models",
+      "vision-language models",
+      "Qwen3-VL",
+      "visual reasoning",
+      "self-reflection",
+      "InstructPart",
+      "PartImageNet",
+      "PascalPart"
+    ],
+    "title": "Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning (code)",
+    "version": "1",
+    "license": "MIT",
+    "publication_date": "2026-09-15",
+    "grants": [
+        {"id": "021nxhr62::2118240"}
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.1007/978-3-032-37383-0_34",
+        "relation": "isSupplementTo",
+        "resource_type": "publication-conferencepaper",
+        "scheme": "doi"
+      }
+    ],
+    "references": [
+      "Mehrab, K. S., Alomari, H., Sarker, N. H., Tang, C.-W., Hakim, Z. I. A., Karpatne, A., & Thomas, C. (2026). Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning. In Computer Vision – ECCV 2026 (pp. 590–608). Springer Nature Switzerland. https://doi.org/10.1007/978-3-032-37383-0_34"
+    ]
+}
