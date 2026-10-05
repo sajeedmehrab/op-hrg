@@ -2,7 +2,8 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2607.15374-b31b1b.svg)](https://arxiv.org/abs/2607.15374)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](#-todo)
-[![Conference](https://img.shields.io/badge/ECCV-2026-6f42c1)](https://eccv.ecva.net/)
+[![Conference Proceedings](https://img.shields.io/badge/ECCV-2026-6f42c1)](https://link.springer.com/chapter/10.1007/978-3-032-37383-0_34)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow)](https://huggingface.co/ksmehrab/op-hrg-qwen3vl4b-instruct)
 
 Official implementation of **"Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning"**, accepted to **ECCV 2026**.
 
@@ -13,6 +14,8 @@ Official implementation of **"Reasoning-Guided Part-Level Visual Grounding via R
 ## Abstract
 
 Multimodal large language models (MLLMs) ground whole objects well from free-form language queries, but they struggle when the query names a part rather than the object. We trace this to a missing object-part hierarchy, since parts are localized in the same single step used for objects. We propose Object-Part Hierarchical Reflective Grounding (OP-HRG), a coarse-to-fine reasoning-guided grounding strategy that first localizes the parent object and then the part within it. A self-check then reflects on the result, with an extension to re-encode the predicted crop to inspect the region it is correcting. We introduce a part-aware GRPO framework to train our pipeline with stage-wise rewards. A 4B model trained this way outperforms 7B grounding LLMs and SAM3 across PascalPart, PartImageNet, and InstructPart, and transfers to reasoning segmentation.
+
+## Model weights: [Hugging Face](https://huggingface.co/ksmehrab/op-hrg-qwen3vl4b-instruct)
 
 ## Repository Structure
 
