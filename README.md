@@ -1,7 +1,7 @@
 # Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning
 
-[![arXiv](https://img.shields.io/badge/arXiv-2607.15374-b31b1b.svg)](https://arxiv.org/abs/2607.15374)
 [![Conference Proceedings](https://img.shields.io/badge/ECCV-2026-6f42c1)](https://link.springer.com/chapter/10.1007/978-3-032-37383-0_34)
+[![arXiv](https://img.shields.io/badge/arXiv-2607.15374-b31b1b.svg)](https://arxiv.org/abs/2607.15374)
 [![DOI](https://img.shields.io/badge/DOI-10.1007%2F978--3--032--37383--0__34-blue)](https://doi.org/10.1007/978-3-032-37383-0_34)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow)](https://huggingface.co/ksmehrab/op-hrg-qwen3vl4b-instruct)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](#-todo)
