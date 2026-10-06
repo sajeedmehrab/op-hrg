@@ -154,9 +154,10 @@ Repository is under active preparation. Planned releases:
 - [x] Release arxiv camera-ready preprint
 - [x] Release training, inference, and evaluation code 
 - [x] Release Hugging Face model checkpoints
-- [ ] Release dataset on Hugging Face or dataset preprocessing scripts (subject to license checking)
+- [x] Release dataset preprocessing scripts (subject to license checking)
+- [x] Release baseline evaluation scripts for SAM3 and VisionReasoner-7B
+- [ ] Release all baseline evaluation scripts
 - [ ] Release Hugging Face demo
-- [ ] Release baseline evaluation scripts
 
 ## Acknowledgements 
 This work was supported by the [Imageomics Institute](https://imageomics.org), which is funded by the US National Science Foundation's Harnessing the Data Revolution (HDR) program under [Award #2118240](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2118240) (Imageomics: A New Frontier of Biological Information Powered by Knowledge-Guided Machine Learning). Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
