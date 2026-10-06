@@ -18,6 +18,10 @@ authors:
   given-names: "Chris"
 date-released: "2026-09-15"
 repository-code: "https://github.com/sajeedmehrab/op-hrg"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23170219"
+    description: "Zenodo archive of the code. Please cite the paper if you use the code (see preferred-citation)."
 license: MIT
 keywords:
   - visual grounding
